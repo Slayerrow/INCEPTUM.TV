@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INCEPTUM.tv</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Link to Google Fonts for Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Social Media Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Include Animate.css for Scroll Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="resized_logo.png" alt="INCEPTUM.tv Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#explore">Explore</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" placeholder="Search..." id="search">
+                <button type="submit" id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Featured Content Section -->
+        <section id="home" class="featured-content">
+            <div class="featured-img">
+                <img src="featured-image.jpg" alt="Featured Documentary">
+            </div>
+            <div class="featured-text">
+                <h2>Featured Documentary</h2>
+                <p>Explore the rich history and culture of Uttar Pradesh through visual storytelling.</p>
+                <a href="#explore" class="cta-btn">Explore Now</a>
+            </div>
+        </section>
+
+        <!-- Latest Articles Grid -->
+        <section id="explore" class="content-grid">
+            <h2>Latest Documentaries</h2>
+            <div class="grid-container">
+                <article class="grid-item">
+                    <img src="doc1.jpg" alt="Documentary 1" class="clickable" data-modal="modal1">
+                    <h3>Documentary Title 1</h3>
+                    <p>Explore the diverse cultures and landscapes.</p>
+                    <a href="#">Read More</a>
+                </article>
+                <article class="grid-item">
+                    <img src="doc2.jpg" alt="Documentary 2" class="clickable" data-modal="modal2">
+                    <h3>Documentary Title 2</h3>
+                    <p>A deep dive into the heart of India.</p>
+                    <a href="#">Read More</a>
+                </article>
+                <article class="grid-item">
+                    <img src="doc3.jpg" alt="Documentary 3" class="clickable" data-modal="modal3">
+                    <h3>Documentary Title 3</h3>
+                    <p>A visual journey through the past and present.</p>
+                    <a href="#">Read More</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Modal Pop-Ups -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <img src="doc1-large.jpg" alt="Documentary 1">
+                <h3>Documentary Title 1</h3>
+                <p>Extended description and more details about the documentary.</p>
+            </div>
+        </div>
+        
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <img src="doc2-large.jpg" alt="Documentary 2">
+                <h3>Documentary Title 2</h3>
+                <p>Extended description and more details about the documentary.</p>
+            </div>
+        </div>
+
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <img src="doc3-large.jpg" alt="Documentary 3">
+                <h3>Documentary Title 3</h3>
+                <p>Extended description and more details about the documentary.</p>
+            </div>
+        </div>
+
+        <!-- Subscription Pop-Up -->
+        <div id="subscription-popup" class="popup">
+            <div class="popup-content">
+                <span class="close-popup">&times;</span>
+                <h3>Subscribe to our Newsletter</h3>
+                <p>Get the latest updates on documentaries and more!</p>
+                <input type="email" placeholder="Enter your email">
+                <button class="subscribe-btn">Subscribe</button>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About INCEPTUM.tv</h2>
+            <p>INCEPTUM.tv is dedicated to showcasing compelling documentaries that explore diverse stories, cultures, and perspectives.</p>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <p>Experience our visual journey through high-quality images and videos.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to collaborate? Reach out to us at <a href="mailto:info@inceptum.tv">info@inceptum.tv</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <h3>Follow Us</h3>
+        <ul class="social-links">
+            <li><a href="https://youtube.com/@inceptum.t?si=wEg-qOVvwFN5YGDB" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+            <li><a href="https://www.facebook.com/inceptum.tv?mibextid=JRoKGi" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+            <li><a href="https://www.instagram.com/inceptum.tv?igsh=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+            <li><a href="https://www.whatsapp.com/channel/0029VazmRzY5Ejy35QcaCy0N" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+        </ul>
+        <p>&copy; 2024 INCEPTUM.tv. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Privacy Policy Button -->
+    <button id="privacyButton" class="privacy-btn">Privacy Policy</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<section id="articles">
+    <h2>Latest Articles</h2>
+    <div class="article">
+        <img src="article-image1.jpg" alt="Article Image 1" class="article-img">
+        <div class="article-content">
+            <h3>Article Title 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+    </div>
+
+    <div class="article">
+        <img src="article-image2.jpg" alt="Article Image 2" class="article-img">
+        <div class="article-content">
+            <h3>Article Title 2</h3>
+            <p>Quisque sollicitudin nisl ac urna tristique, a feugiat urna viverra. Integer nec ante non magna scelerisque ullamcorper.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+    </div>
+</section>
+<section id="media">
+    <h2>Featured Media</h2>
+    
+    <!-- Image Gallery -->
+    <div class="image-gallery">
+        <img src="media-image1.jpg" alt="Media Image 1" class="media-img">
+        <img src="media-image2.jpg" alt="Media Image 2" class="media-img">
+        <img src="media-image3.jpg" alt="Media Image 3" class="media-img">
+    </div>
+
+    <!-- Embedded Video -->
+    <div class="video-container">
+        <h3>Featured Documentary Video</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</section>
+<section id="blog">
+    <h2>Our Latest Blog</h2>
+    <div class="blog-post">
+        <h3>Exploring the Wonders of Nature</h3>
+        <img src="blog-image.jpg" alt="Blog Image" class="blog-img">
+        <p>Nature has always been a fascinating subject for exploration. In this blog, we will explore...</p>
+        <a href="#" class="read-more">Read Full Blog</a>
+    </div>
+</section>
+<!-- Subscription Modal -->
+<div id="subscription-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Subscribe to Our Newsletter</h2>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</div>
+
+<body>
+    <!-- Header with Logo, Menu, and Search Bar -->
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Articles/Blog -->
+        <section id="articles"></section>
+
+        <!-- Media Gallery -->
+        <section id="media"></section>
+
+        <!-- Blog Post Section -->
+        <section id="blog"></section>
+
+        <!-- Subscription Pop-Up -->
+        <div id="subscription-popup" class="popup"></div>
+    </main>
+
+    <!-- Footer with Social Media Links -->
+
+    <!-- JavaScript for Modal & Dynamic Content -->
+    <script src="script.js"></script>
+</body>
