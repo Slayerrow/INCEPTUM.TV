@@ -3,215 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INCEPTUM.tv</title>
+    <title>Screen Recorder Tool</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome for Social Media Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="logo">
-            <!-- Logo Image -->
-            <img src="images/image1.jpg" alt="">
+    <div class="container">
+        <div class="header">
+            <h1>Screen Recorder Tool</h1>
         </div>
-        <h1>INCEPTUM.tv</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#explore">Explore</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
 
-        <!-- Search Bar -->
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search..." />
-            <button id="searchButton">Search</button>
+        <div class="controls">
+            <button id="startBtn" class="btn start">Start Recording</button>
+            <button id="stopBtn" class="btn stop" disabled>Stop Recording</button>
+            <button id="downloadBtn" class="btn download" disabled>Download Video</button>
         </div>
-    </header>
 
-    <!-- Home Section -->
-    <section id="home">
-        <h2>Welcome to INCEPTUM.tv</h2>
-        <p>Your gateway to insightful documentaries and visual storytelling.</p>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About INCEPTUM.tv</h2>
-        <p>INCEPTUM.tv is dedicated to showcasing compelling documentaries that explore diverse stories, cultures, and perspectives.</p>
-    </section>
-
-    <!-- Explore Section -->
-    <section id="explore">
-        <h2>Explore</h2>
-        <p>Browse through a variety of topics and themes covered in our documentaries.</p>
         <div class="video-container">
-            <!-- Latest video embed from the channel -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/?listType=user_uploads&list=inceptum.t" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <video id="recordedVideo" controls></video>
         </div>
-    </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <p>Experience our visual journey through high-quality images and videos.</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Have questions or want to collaborate? Reach out to us at <a href="mailto:info@inceptum.tv">info@inceptum.tv</a>.</p>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <h3>Follow Us</h3>
-        <ul class="social-links">
-            <li><a href="https://youtube.com/@inceptum.t?si=wEg-qOVvwFN5YGDB" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
-            <li><a href="https://www.facebook.com/inceptum.tv?mibextid=JRoKGi" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
-            <li><a href="https://www.instagram.com/inceptum.tv?igsh=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-            <li><a href="https://www.whatsapp.com/channel/0029VazmRzY5Ejy35QcaCy0N" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
-        </ul>
-        <p>&copy; 2024 INCEPTUM.tv. All Rights Reserved.</p>
-    </footer>
-
-    <!-- Button to toggle dark mode -->
-    <button id="toggleMode">Toggle Dark Mode</button>
-
-    <!-- JavaScript -->
-    <script>
-        // Toggle dark mode
-        const toggleButton = document.getElementById('toggleMode');
-        toggleButton.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-        });
-    </script>
-
-    <!-- Latest Articles Section -->
-    <section id="articles">
-        <h2>Latest Articles</h2>
-        <div class="articles-container">
-            <!-- Article 1 -->
-            <div class="article-item">
-                <img src="article-image1.jpg" alt="Article 1 Image">
-                <h3>Title of Article 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti.</p>
-                <a href="article1.html" class="read-more">Read More</a>
-            </div>
-
-            <!-- Article 2 -->
-            <div class="article-item">
-                <img src="article-image2.jpg" alt="Article 2 Image">
-                <h3>Title of Article 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti.</p>
-                <a href="article2.html" class="read-more">Read More</a>
-            </div>
-
-            <!-- Article 3 -->
-            <div class="article-item">
-                <img src="article-image3.jpg" alt="Article 3 Image">
-                <h3>Title of Article 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti.</p>
-                <a href="article3.html" class="read-more">Read More</a>
-            </div>
+        <div class="feedback">
+            <p id="status">Ready to record...</p>
         </div>
-    </section>
+    </div>
 
+    <script src="https://cdn.webrtc-experiment.com/RecordRTC.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
-<section id="blog">
-    <h2>Our Latest Blog</h2>
-    <div class="blog-post">
-        <h3>Exploring the Wonders of Nature</h3>
-        <img src="images/blog-image1.jpg" alt="Nature Blog Image" class="blog-img">
-        <p class="blog-excerpt">
-            Nature has always been a fascinating subject for exploration. In this blog, we will explore the beauty and importance of natural ecosystems...
-        </p>
-        <a href="#full-post" class="read-more" onclick="openPost()">Read Full Blog</a>
-    </div>
-
-    <!-- Modal for Full Blog Post -->
-    <div id="full-post" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closePost()">&times;</span>
-            <h2>Exploring the Wonders of Nature</h2>
-            <img src="images/blog-image1-large.jpg" alt="Full Blog Image" class="blog-img">
-            <p>
-                Nature has always been a fascinating subject for exploration. In this blog, we will explore the beauty and importance of natural ecosystems...
-                (continue the full blog content here)
-            </p>
-        </div>
-    </div>
-</section>
-<!-- Tidio Chatbot Integration -->
-<script src="//code.tidio.co/your_unique_code.js" async></script>
-
-<!-- Mailchimp Integration Form -->
-<form action="https://your_mailchimp_list_url" method="post" target="_blank" novalidate>
-    <label for="email">Subscribe for Updates</label>
-    <input type="email" name="EMAIL" id="email" placeholder="Enter your email" required>
-    <button type="submit">Subscribe</button>
-</form>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID?start=60&end=120" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<div id="loginForm">
-    <h2>Login</h2>
-    <form>
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Password" required>
-        <button type="submit">Login</button>
-    </form>
-    <p>New here? <a href="signup.html">Sign up</a></p>
-</div>
-
-<div id="newsletter">
-    <h3>Subscribe to Our Newsletter</h3>
-    <form>
-        <input type="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-    </form>
-</div>
-<div id="articles"></div>
-<script>
-    fetch('articles.json') // JSON file with articles data
-        .then(response => response.json())
-        .then(data => {
-            const container = document.getElementById('articles');
-            data.articles.forEach(article => {
-                const div = document.createElement('div');
-                div.innerHTML = `<h3>${article.title}</h3><p>${article.summary}</p><a href="${article.link}">Read More</a>`;
-                container.appendChild(div);
-            });
-        });
-</script>
-<div class="rating">
-    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-</div>
-<script>
-    document.querySelectorAll('.rating span').forEach((star, index) => {
-        star.addEventListener('click', () => {
-            alert(`You rated this ${5 - index} stars!`);
-        });
-    });
-</script>
-<div id="countdown"></div>
-<script>
-    const targetDate = new Date('2024-12-31T23:59:59');
-    const countdown = document.getElementById('countdown');
-
-    function updateCountdown() {
-        const now = new Date();
-        const diff = targetDate - now;
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((diff / 1000 / 60) % 60);
-        const seconds = Math.floor((diff / 1000) % 60);
-        countdown.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    }
-
-    setInterval(updateCountdown, 1000);
-</script>
